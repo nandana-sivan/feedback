@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81ecec"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feedback Collector"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Input for Name -->
+    <EditText
+        android:textColor="@color/black"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Input for Email -->
+    <EditText
+        android:textColor="@color/black"
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:padding="8dp"
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input for Feedback -->
+    <EditText
+        android:textColor="@color/black"
+        android:id="@+id/editTextFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your feedback"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginTop="8dp"
+        android:lines="4"
+        android:gravity="top"
+        android:inputType="textMultiLine" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Scrollable Feedback List -->
+    <ScrollView
+        android:id="@+id/scrollViewFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/textViewFeedbackList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:gravity="start" />
+
+    </ScrollView>
+
+</LinearLayout>
